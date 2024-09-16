@@ -20,6 +20,7 @@ def main():
             if event.type == pygame.QUIT:
                 return
         screen.fill((0,0,0))
+        player.update(dt)
         player.draw(screen)
         pygame.display.flip() # Updates the screen after each iteration
         dt = clock.tick(60) / 1000 # ticks at 60hz, converts delta time from ms to sec
