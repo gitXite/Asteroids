@@ -1,4 +1,7 @@
-from circleshape import *
+import pygame
+import random
+from constants import *
+from circleshape import CircleShape
 
 
 class Asteroid(CircleShape):
@@ -12,12 +15,9 @@ class Asteroid(CircleShape):
 
 
     def draw(self, screen):
-        color = (255, 255, 255) # White color
-        position = (self.x, self.y)
-        pygame.draw.circle(screen, color, position, self.radius, width=2)
+        pygame.draw.circle(screen, "white", self.position, self.radius, width=2)
 
 
     def update(self, dt):
-        delta_position = self.velocity * dt
-        self.x += delta_position.x
-        self.y += delta_position.y
+        self.position += self.velocity * dt
+
