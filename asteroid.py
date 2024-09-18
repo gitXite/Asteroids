@@ -8,9 +8,8 @@ class Asteroid(CircleShape):
         self.x = x
         self.y = y
 
-        self.velocity = pygame.Vector2(random.uniform(-1, 1), random.uniform(-1, 1))
-        speed = random.randint(50, 100)
-        self.velocity = self.velocity * speed
+        self.velocity = pygame.Vector2(0, 0)
+        
 
 
     def draw(self, screen):
