@@ -31,7 +31,6 @@ def main():
 
     player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2) # Instantiate a player object
     asteroid_field = AsteroidField()
-    shot = Shot()
 
 
     while True:
