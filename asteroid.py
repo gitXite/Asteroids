@@ -22,7 +22,7 @@ class Asteroid(CircleShape):
     def split(self):
         self.kill()
         if self.radius <= ASTEROID_MIN_RADIUS:
-            self.score += 50
+            self.score += SCORE
             return
             
         random_angle = random.uniform(20, 50)
