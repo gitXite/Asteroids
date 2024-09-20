@@ -46,6 +46,9 @@ def main():
         for asteroid in asteroids:
             if asteroid.collisions(player):
                 print("Game over!")
+                print("----------------------------")
+                print(f"Your score: {Asteroid.score}")
+                print("----------------------------")
                 sys.exit()
                 
             for shot in shots:
