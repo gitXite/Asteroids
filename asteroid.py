@@ -8,7 +8,8 @@ class Asteroid(CircleShape):
     def __init__(self, x, y, radius):
         super().__init__(x, y, radius)
         self.velocity = pygame.Vector2(0, 0)
-        
+        self.score = 0
+    
 
     def draw(self, screen):
         pygame.draw.circle(screen, "white", self.position, self.radius, width=2)
@@ -21,6 +22,7 @@ class Asteroid(CircleShape):
     def split(self):
         self.kill()
         if self.radius <= ASTEROID_MIN_RADIUS:
+            self.score += 50
             return
             
         random_angle = random.uniform(20, 50)
