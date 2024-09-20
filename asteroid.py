@@ -31,6 +31,6 @@ class Asteroid(CircleShape):
         self.radius -= ASTEROID_MIN_RADIUS
         split_asteroid1 = Asteroid(self.position.x, self.position.y, self.radius)
         split_asteroid2 = Asteroid(self.position.x, self.position.y, self.radius)
-        split_asteroid1.velocity = vector1 * 1.2
-        split_asteroid2.velocity = vector2 * 1.2
+        split_asteroid1.velocity = vector1 * 1.5
+        split_asteroid2.velocity = vector2 * 1.5
 
